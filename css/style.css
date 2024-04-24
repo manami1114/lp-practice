@@ -1,5 +1,10 @@
 @charset "utf-8";
 
+/* 全体 */
+html {
+  font-size: 100%;
+}
+
 body {
   text-align: center;
   overflow-x: hidden;
@@ -9,10 +14,16 @@ a {
   text-decoration: none;
 }
 
+button {
+  border: none;
+}
+
 .inner {
   width: 1100px;
   margin: 0 auto;
 }
+
+/* ヘッダー */
 
 .header {
   padding: 15px 0;
@@ -44,6 +55,8 @@ a {
   color: #333;
 }
 
+/* keyvisual */
+
 .keyvisual-inner {
   background: url(../img/keyvisual/keyvisual.jpg) no-repeat;
   background-size: cover;
@@ -73,6 +86,8 @@ h2 {
   font-weight: 700;
   color: #fff;
 }
+
+/* work */
 
 .work {
   background-color: #e3f2fd;
@@ -108,6 +123,8 @@ h2 {
   word-break: break-all;
 }
 
+/* we are skills */
+
 .skills {
   background-color: #fff;
 }
@@ -138,6 +155,8 @@ h3 {
 .skills-list li img:hover {
   opacity: 1;
 }
+
+/* select plan */
 
 .plan {
   background-color: #d0dfea;
@@ -176,6 +195,8 @@ tr:first-child {
   background-color: #6ba7eb;
 }
 
+/* sns */
+
 .sns {
   background-color: #e3f2fd;
 }
@@ -202,6 +223,8 @@ tr:first-child {
   background-color: #fff;
 }
 
+/* footer */
+
 .footer {
   background-color: #cfd8dc;
 }
@@ -217,4 +240,214 @@ tr:first-child {
 small {
   font-size: 10px;
   letter-spacing: 0.5px;
+}
+
+/* tab */
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  /* 全体 tab */
+  .inner {
+    width: 97%;
+    margin: 0 auto;
+  }
+
+  /* keyvisual tab */
+  .keyvisual-inner {
+    padding: 250px 0;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+
+  /* work tab */
+
+  .work-container {
+    flex-direction: column;
+    padding: 50px 0;
+    width: 100%;
+  }
+
+  /* we are skills  tab*/
+
+  .skills-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 0;
+    column-gap: 0;
+  }
+
+  .skills-list li:nth-child(3n) {
+    margin-bottom: 80px;
+  }
+
+  .skills-list li:last-child {
+    margin-bottom: 0;
+  }
+
+  .skills-list li img {
+    vertical-align: middle;
+  }
+}
+
+/* mobile */
+.drawer-hidden {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+
+  /* 全体 mobile*/
+  .inner {
+    width: 97%;
+    margin: 0 auto;
+  }
+
+  /* ハンバーガー  mobile*/
+  .btn,
+  .btn a {
+    display: none;
+  }
+
+  .drawer-open {
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+  }
+
+  .drawer-open span,
+  .drawer-open span::before,
+  .drawer-open span::after {
+    content: ' ';
+    display: block;
+    height: 5px;
+    width: 25px;
+    border-radius: 3px;
+    background: #8e8e8e;
+    position: absolute;
+  }
+
+  .drawer-open span::before {
+    bottom: 8px;
+  }
+
+  .drawer-open span::after {
+    top: 8px;
+  }
+
+  label {
+    border: 2px solid #8e8e8e;
+    border-radius: 5px;
+  }
+
+  /* keyvisual mobile */
+  .keyvisual-inner {
+    padding: 200px 0;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  /* work mobile */
+
+  .work-container {
+    flex-direction: column;
+    padding: 50px 0;
+    width: 100%;
+  }
+
+  /* we are skills mobile */
+
+  .skills-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 0;
+    column-gap: 0;
+  }
+
+  .skills-list li:nth-child(3n) {
+    margin-bottom: 100px;
+  }
+
+  .skills-list li:last-child {
+    margin-bottom: 0;
+  }
+
+  .skills-list li img {
+    vertical-align: middle;
+  }
+
+  /* select plan mobile */
+
+  table {
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  th {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  td {
+    font-size: 12px;
+  }
+
+  /* sns mobile */
+
+  .sns-inner {
+    padding: 50px 15px;
+  }
+
+  .icon-list {
+    flex-direction: column;
+  }
+
+  .sns-icon {
+    width: 100%;
+    font-size: 40px;
+    overflow: hidden;
+    padding: 50px 0;
+  }
+
+  .sns-icon:hover {
+    transition: 0.5s;
+    background-color: #fff;
+  }
+
+  /* footer mobile */
+
+  .footer {
+    background-color: #cfd8dc;
+  }
+
+  .footer-inner {
+    padding: 20px 0 25px;
+  }
+
+  .footer-inner {
+    text-align: right;
+  }
+
+  small {
+    font-size: 10px;
+    letter-spacing: 0.5px;
+  }
+
 }
